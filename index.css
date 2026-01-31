@@ -53,6 +53,7 @@ a {
     color: #5f9341;
     font-weight: 600;
     text-decoration: none;
+    word-break: break-all;
 }
 
 .leadscontainer {
@@ -67,5 +68,4 @@ a {
     background-color: whitesmoke;
     box-shadow: 2px 5px 0px black;
 }
-
 
