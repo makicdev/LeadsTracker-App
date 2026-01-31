@@ -22,11 +22,13 @@ function render(leads) {
     let listItems = ""
     for (let i = 0; i < leads.length; i++) {
         listItems += `
+        <div class="leadscontainer">
             <li>
                 <a target='_blank' href='${leads[i]}'>
                     ${leads[i]}
                 </a>
             </li>
+        </div>
         `
     }
     ulEl.innerHTML = listItems
@@ -41,7 +43,7 @@ onValue(referenceInDB, function(snapshot) {
     }
 })
 
-deleteBtn.addEventListener("dblclick", function() {
+deleteBtn.addEventListener("click", function() {
     remove(referenceInDB)
     ulEl.innerHTML = ""
 })
@@ -49,4 +51,5 @@ deleteBtn.addEventListener("dblclick", function() {
 inputBtn.addEventListener("click", function() {
     push(referenceInDB, inputEl.value)
     inputEl.value = "" 
-})
+}) 
+
